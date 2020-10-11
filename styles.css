@@ -1,0 +1,114 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #EEF4FE;
+  height: auto;
+}
+
+/*div {
+  outline: solid black 1px;
+}*/
+
+
+.nav {
+  position: absolute ;
+  display: inline-block;
+  background: transparent;
+  background-color: rgba(0, 0, 0, 0.01);
+  width: 100%;
+  text-align: center;
+  z-index: 5;
+}
+
+li {
+  display: inline-block;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  color: #403D43;
+  margin:10px;
+}
+
+a {
+  color: #98BFF9;
+  text-decoration: none;
+}
+.nav ul li a,
+.nav ul li a:after,
+.nav ul li a:before {
+  transition: all .8s;
+}
+.nav ul li a:hover {
+  color: #403D43;
+}
+.nav.stroke ul li a {
+ position: relative;
+}
+.nav.stroke ul li a:after {
+ position: absolute;
+ bottom: 0;
+ left: 0;
+ right: 0;
+ margin: auto;
+ width: 0%;
+ content: '.';
+ color: transparent;
+ background: #aaa;
+ height: 1px;
+}
+.nav.stroke ul li a:hover:after {
+ width: 100%;
+}
+
+.container {
+  display: flex;
+  height: auto;
+}
+
+.Main-Header {
+  display: flex;
+  height: 80%;
+  width: 100%;
+}
+
+.Header-Text {
+  position: fixed;
+  font-family:'Paytone One', sans-serif;
+  font-size: 70px;
+  color: #403D43;
+  display: block;
+  margin-top: 130px;
+  height: 500px;
+  width: 100%;
+  line-height: 150px;
+  text-align: center;
+  /*
+  margin-top: 10%;
+  margin-left: 20%;*/
+}
+
+.Header-Text span {
+  font-family: 'Roboto', sans-serif;
+  font-size: 180px;
+  color: #E7ACA9;
+}
+
+.Left-Element {
+  position: absolute;
+  margin-top:8%;
+  margin-left: 0%;
+}
+
+.Right-Element {
+  position: absolute;
+  margin-top:20%;
+  right: 0px;
+}
+
+.Left {
+  width: 700px;
+}
+
+.Right {
+  width: 700px;
+
+}
