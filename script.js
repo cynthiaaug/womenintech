@@ -20,3 +20,5 @@ function newStyle() {
   elem.style.color = newColor;
   elem.style.fontFamily = newFont;
 }
+
+
