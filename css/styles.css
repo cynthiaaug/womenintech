@@ -165,8 +165,8 @@ a {
     background-color: transparent;
 }
 a:hover {
-  color: #467370;
-  text-decoration: underline;
+    color: #9C7F96;
+    text-decoration: underline;
 }
 
 a:not([href]):not([class]) {
@@ -2431,22 +2431,23 @@ textarea.form-control {
 }
 
 .btn {
-  display: inline-block;
-  font-weight: 400;
-  color: #212529;
-  text-align: center;
-  vertical-align: middle;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  background-color: transparent;
-  border: 1px solid transparent;
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  border-radius: 0.25rem;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    z-index: 10;
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
   .btn {
@@ -2480,13 +2481,13 @@ fieldset:disabled a.btn {
 .btn-primary:hover {
     color: #fff;
     background-color: #B48494;
-    border-color: #4f837f;
+    border-color: #9C7F96;
 }
 .btn-primary:focus, .btn-primary.focus {
-  color: #fff;
-  background-color: #548b87;
-  border-color: #4f837f;
-  box-shadow: 0 0 0 0.2rem rgba(123, 175, 172, 0.5);
+    color: #fff;
+    background-color: #548b87;
+    border-color: #9C7F96;
+    box-shadow: 0 0 0 0.2rem rgba(123, 175, 172, 0.);
 }
 .btn-primary.disabled, .btn-primary:disabled {
     color: #fff;
@@ -2494,12 +2495,12 @@ fieldset:disabled a.btn {
     border-color: #64a19d;
 }
 .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle {
-  color: #fff;
-  background-color: #4f837f;
-  border-color: #4a7b78;
+    color: #fff;
+    background-color: #9C7F96;
+    border-color: #9C7F96;
 }
 .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, .show > .btn-primary.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem rgba(123, 175, 172, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(123, 175, 172, 0);
 }
 
 .btn-secondary {
@@ -4776,8 +4777,8 @@ a.badge:hover, a.badge:focus {
   background-color: #64a19d;
 }
 a.badge-primary:hover, a.badge-primary:focus {
-  color: #fff;
-  background-color: #4f837f;
+    color: #fff;
+    background-color: #9C7F96;
 }
 a.badge-primary:focus, a.badge-primary.focus {
   outline: 0;
@@ -6209,7 +6210,7 @@ a.close.disabled {
 a.bg-primary:hover, a.bg-primary:focus,
 button.bg-primary:hover,
 button.bg-primary:focus {
-  background-color: #4f837f !important;
+    background-color: #9C7F96 !important;
 }
 
 .bg-secondary {
@@ -10398,27 +10399,29 @@ body {
 
 #section05 {
     margin-top:10%;
+    z-index: -100;
 }
 
 #section05 a {
     padding-top: 70px;
 }
 
-#section05 a span {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 24px;
-    height: 24px;
-    margin-left: -12px;
-    border-left: 1px solid #fff;
-    border-bottom: 1px solid #fff;
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-    -webkit-animation: sdb05 1.5s infinite;
-    animation: sdb05 1.5s infinite;
-    box-sizing: border-box;
-}
+    #section05 a span {
+        z-index: -100;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 24px;
+        height: 24px;
+        margin-left: -12px;
+        border-left: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        -webkit-animation: sdb05 1.5s infinite;
+        animation: sdb05 1.5s infinite;
+        box-sizing: border-box;
+    }
 
 @-webkit-keyframes sdb05 {
     0% {
@@ -10461,15 +10464,15 @@ section::after {
     content: '';
     width: 100%;
     height: 80%;
-
+    z-index: -100;
 }
 
 
 .demo a {
-
+    z-index: -100;
     bottom: 6em;
     left: 50%;
-    z-index: 2;
+    z-index: -10;
     display: inline-block;
     -webkit-transform: translate(0, -50%);
     transform: translate(0, -50%);
