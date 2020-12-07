@@ -57,6 +57,27 @@
 
 var ctx = document.getElementById("myChart");
 
+var options = {
+    tooltips: {
+        enabled: false
+    },
+    plugins: {
+        datalabels: {
+            formatter: (value, ctx) => {
+                let datasets = ctx.chart.data.datasets;
+                if (datasets.indexOf(ctx.dataset) === datasets.length - 1) {
+                    let sum = datasets[0].data.reduce((a, b) => a + b, 0);
+                    let percentage = Math.round((value / sum) * 100) + '%';
+                    return percentage;
+                } else {
+                    return percentage;
+                }
+            },
+            color: '#fff',
+        }
+    }
+};
+
 var stars = [20, 17, 17, 15, 10];
 var frameworks = ["Apple", "Google", "LinkedIn", "Facebook", "Twitter"];
 
@@ -105,14 +126,22 @@ var myChart = new Chart(ctx, {
                 }
             }]
         }
-    }
+    },
+
+    plugins: { 
+        labels: {
+            display: false
+        }
+}
+
+
 
 });
 
 var ctx = document.getElementById("myChart2");
 
-var stars = [20, 17, 17, 15, 10];
-var frameworks = ["Apple", "Google", "LinkedIn", "Facebook", "Twitter"];
+var stars = [19, 81];
+var frameworks = ["Women", "Men"];
 
 var myChart2 = new Chart(ctx, {
     type: "pie",
@@ -140,14 +169,33 @@ var myChart2 = new Chart(ctx, {
             }
         ]
 
-    }
+    },
 
+    options: {
+        legend: {
+            display: true,
+            position: 'bottom',
+            labels: {
+                boxWidth: 80,
+                fontColor: 'black'
+            }
+        },
+
+        plugins: {
+            labels: {
+                render: 'percentage',
+                position: 'outside'
+            }
+
+        }
+
+    }
 });
 
 var ctx = document.getElementById("myChart3");
 
-var stars = [20, 17, 17, 15, 10];
-var frameworks = ["Apple", "Google", "LinkedIn", "Facebook", "Twitter"];
+var stars = [70, 14, 12, 2, 1, 1];
+var frameworks = ["Male", "White", "Asian", "Latinx/Hispanic Female", "Black/African American Female", "Other"];
 
 var myChart3 = new Chart(ctx, {
     type: "doughnut",
@@ -159,21 +207,44 @@ var myChart3 = new Chart(ctx, {
                 data: stars,
                 backgroundColor: [
                     "rgba(169, 201, 255, 0.5)",
-                    "rgba(54, 162, 235, 1)",
-                    "rgba(255, 206, 86, 1)",
-                    "rgba(75, 192, 192, 1)",
-                    "rgba(153, 102, 255, 1)"
+                    "rgba(255, 182, 171, 0.5)",
+                    "rgba(156, 127, 150, 0.5)",
+                    "rgba(244, 207, 205, 0.5)",
+                    "rgba(153, 102, 255, 0.5)",
+                    "rgba(53, 62, 131, 0.5)"
                 ],
                 borderColor: [
                     "rgba(169, 201, 255, 1)",
-                    "rgba(54, 162, 235, 1)",
-                    "rgba(255, 206, 86, 1)",
-                    "rgba(75, 192, 192, 1)",
-                    "rgba(153, 102, 255, 1)"
+                    "rgba(255, 182, 171, 1)",
+                    "rgba(156, 127, 150, 1)",
+                    "rgba(244, 207, 205, 1)",
+                    "rgba(153, 102, 255, 1)",
+                    "rgba(53, 62, 131, 1)"
                 ],
                 borderWidth: 1
+
             }
+
+           
         ]
+
+    },
+    options: {
+        legend: {
+            display: true,
+            position: 'bottom',
+            labels: {
+                boxWidth: 80,
+                fontColor: 'black'
+            }
+        },
+        plugins: {
+            labels: {
+                render: 'percentage',
+                position: 'outside'
+            }
+
+        }
 
     }
 

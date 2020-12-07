@@ -170,8 +170,9 @@ a:hover {
 }
 
 a:not([href]):not([class]) {
-  color: inherit;
-  text-decoration: none;
+    color: inherit;
+    text-decoration: none;
+    rgba(255, 255, 255, 1)
 }
 a:not([href]):not([class]):hover {
   color: inherit;
@@ -486,7 +487,7 @@ mark,
 }
 
 .img-fluid-character-header {
-    max-width: 40%;
+    max-width: 30%;
     height: auto;
 }
 
@@ -6284,8 +6285,11 @@ button.bg-dark:focus {
 }
 
 .bg-black {
-    background-color: #C0BAC7 !important;
-    
+    background-color: #C0BAC7 !important; 
+}
+
+.bg-black-footer {
+    background-color: #353E83 !important;
 }
 
 .bg-blue {
@@ -10017,6 +10021,10 @@ a.text-black:hover, a.text-black:focus {
     color: #9C7F96 !important;
 }
 
+.text-white-footer {
+    color: #fff !important;
+}
+
 .text-hide {
   font: 0/0 a;
   color: transparent;
@@ -10172,22 +10180,22 @@ body {
   background-color: transparent;
 }
 @media (min-width: 992px) {
-  #mainNav {
-    padding-top: 0;
-    padding-bottom: 0;
-    border-bottom: none;
-    background-color: transparent;
-    transition: background-color 0.3s ease-in-out;
-  }
-  #mainNav .navbar-brand {
-    padding: 0.5rem 0;
-    color: rgba(255, 255, 255, 0.5);
-  }
-  #mainNav .nav-link {
-    transition: none;
-    padding: 2rem 1.5rem;
-    color: rgba(255, 255, 255, 0.5);
-  }
+    #mainNav {
+        padding-top: 0;
+        padding-bottom: 0;
+        border-bottom: none;
+        background-color: transparent;
+        transition: background-color 0.3s ease-in-out;
+    }
+    #mainNav .navbar-brand {
+        padding: 0.5rem 0;
+        color: #353E83;
+    }
+        #mainNav .nav-link {
+            transition: none;
+            padding: 2rem 1.5rem;
+            color: #353E83;
+        }
   #mainNav .nav-link:hover {
     color: rgba(255, 255, 255, 0.75);
   }
@@ -10281,6 +10289,12 @@ body {
     background: linear-gradient(to bottom, #C0BAC7 0%, rgba(255, 234, 233, 1) 75%, rgba(255, 234, 233, 0.8) 100%);
 
 }
+
+.about-section-stats {
+    padding-top: 10rem;
+    background: linear-gradient(to bottom, #EEF4FE 0%, rgba(255, 234, 233, 1) 75%, rgba(255, 234, 233, 0.8) 100%);
+}
+
 .about-section-2 {
     padding-top: 10rem;
     background: rgba(218, 228, 245, 1);
@@ -10485,6 +10499,12 @@ section::after {
 
 .demo a:hover {
     opacity: .5;
+}
+
+.Chart {
+
+    padding: 1em;
+    
 }
 
 
