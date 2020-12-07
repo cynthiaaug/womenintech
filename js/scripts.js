@@ -203,7 +203,7 @@ var myChart3 = new Chart(ctx, {
         labels: frameworks,
         datasets: [
             {
-                label: "% of women held jobs",
+                label: "% of",
                 data: stars,
                 backgroundColor: [
                     "rgba(169, 201, 255, 0.5)",
