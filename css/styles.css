@@ -10025,6 +10025,10 @@ a.text-black:hover, a.text-black:focus {
     color: #50454D !important;
 }
 
+.text-white-70 {
+    color: #353E83 !important;
+}
+
 .text-white-footer {
     color: #fff !important;
 }
